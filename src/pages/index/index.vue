@@ -7,10 +7,9 @@
 </template>
 
 <script>
-
-import Footer from '../src/components/index/Footer/Footer.vue'
-import Content from '../src/components/index/Content/Content'
-import Header from '../src/components/index/Header/Header.vue'
+import Header from '../../components/index/Header/Header.vue'
+import Content from '../../components/index/Content/Content.vue'
+import Footer from '../../components/index/Footer/Footer.vue'
 export default {
   name: "Index",
   components: {Footer,Header,Content},

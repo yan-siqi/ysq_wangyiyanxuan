@@ -17,9 +17,10 @@
         <div class="icon"></div>
         <span class="icon_text">购物车</span>
       </div>
-      <div class="foot_item">
+      <div class="foot_item" @click="toPersonal('/personal')">
+<!--        <router-link to='/personal'></router-link> -->
         <div class="icon"></div>
-        <span class="icon_text">个人</span>
+        <span class="icon_text">个人中心</span>
       </div>
     </div>
   </div>
@@ -28,6 +29,13 @@
 <script>
 export default {
   name: "Footer",
+  methods: {
+    toPersonal(path) {
+      console.log('点击事件后触发了')
+      console.log(this.$router)
+      this.$router.push(path);
+    },
+  },
 };
 </script>
 
@@ -67,11 +75,11 @@ export default {
     }
     &:nth-child(4) .icon {
       background-image: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/tabBar-s43a0dc8a7d-de25ef8e19.png?imageView&type=webp);
-      background-position: 0 -.66667rem
+      background-position: 0 -0.66667rem;
     }
     &:nth-child(5) .icon {
       background-image: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/tabBar-s43a0dc8a7d-de25ef8e19.png?imageView&type=webp);
-      background-position: 0 -6rem
+      background-position: 0 -6rem;
     }
     .icon_text {
       display: block;

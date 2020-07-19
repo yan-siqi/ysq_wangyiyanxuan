@@ -1,10 +1,10 @@
 <template>
-  <div>hahah</div>
+  <div>这个是搜索界面</div>
 </template>
 
 <script>
 export default {
-  name: 'Content',
+  name: '',
 }
 </script>
 

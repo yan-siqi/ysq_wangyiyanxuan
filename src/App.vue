@@ -8,7 +8,8 @@
 
 <script>
 import "../src/assets/function/index";
-import "../src/pages/index/index";
+import Index from '../src/pages/index/index.vue'
+
 //引入滑块滑动
 //import BScroll from 'better-scroll'
 export default {
