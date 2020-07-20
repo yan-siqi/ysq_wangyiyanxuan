@@ -12,6 +12,7 @@ const routes=[
   {
     //首页
     path:'/',
+    name:'index',
     component:Index
   },
   {

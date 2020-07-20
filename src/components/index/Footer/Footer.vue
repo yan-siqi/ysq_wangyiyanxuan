@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="footer">
-      <div class="foot_item">
+      <div class="foot_item" @click="toIndex('/')" >
         <i class="icon active"></i>
         <span class="icon_text active">首页</span>
       </div>
@@ -18,8 +18,6 @@
         <span class="icon_text">购物车</span>
       </div>
       <div class="foot_item" @click="toPersonal('/personal')">
-        <!-- <router-link to="/personal"></router-link> -->
-        <router-view></router-view>
         <div class="icon"></div>
         <span class="icon_text">个人中心</span>
       </div>
@@ -31,15 +29,18 @@
 export default {
   name: "Footer",
   methods: {
-    
-    toCategory(path){
-       this.$router.push(path);
+    toIndex(path) {
+      this.$router.push(path);
+       
     },
-    toBuy(path){
-       this.$router.push(path);
+    toCategory(path) {
+      this.$router.push(path);
     },
-    toCart(path){
-       this.$router.push(path);
+    toBuy(path) {
+      this.$router.push(path);
+    },
+    toCart(path) {
+      this.$router.push(path);
     },
     toPersonal(path) {
       console.log("点击事件后触发了");
