@@ -8,7 +8,7 @@
           alt=""
           srcset=""
         />
-        <div class="search">
+        <div class="search" @click="toSearch('./search')">
           <i class="iconfont icon-sousuo"></i>
           <div class="hIpt " type="text" placeholder="请按你的需求搜索">
             请按你的需求搜索
@@ -18,7 +18,7 @@
       </div>
       <!-- 导航区域 -->
       <div class="top2">
-        <div class="hLeftTabs">
+        <div class="hLeftTabs" enable-flex scroll-x="true">
           <div class="tabList" scroll>
             <div class="tabItem">
               <span class="txt">
@@ -27,18 +27,16 @@
             </div>
 
             <div class="tabItem">
+              <span class="txt">居家生活</span>
+            </div>
+            <div class="tabItem">
               <span class="txt">
-               聚集生活
+                服饰鞋包
               </span>
             </div>
             <div class="tabItem">
               <span class="txt">
-                推荐
-              </span>
-            </div>
-            <div class="tabItem">
-              <span class="txt">
-                推荐
+                美食酒水
               </span>
             </div>
             <div class="tabItem">
@@ -85,8 +83,36 @@
 </template>
 
 <script>
+import { mapState, mapActions } from "vuex";
+//import request from "../../../utils/request";
+//import Recommend from "../../recommend/recommend";
 export default {
   name: "Header",
+  components: {
+   // Recommend,
+  },
+  async mounted() {
+    //获取首页数据
+    this.getIndexData();
+  },
+  methods: {
+    ...mapActions({
+				getIndexData: 'getIndexData'
+			}),
+			changeNavId(navIndex, navId){
+				this.navIndex = navIndex
+				this.navId = navId
+			},
+    //跳转到search界面
+    toSearch(path) {
+      this.$router.push(path);
+    },
+  },
+  computed: {
+    ...mapState({
+      indexData: (state) => state.index.indexData,
+    }),
+  },
 };
 </script>
 
@@ -165,13 +191,13 @@ export default {
         display: flex;
         flex-direction: row;
         flex-shrink: 0;
-       // padding: 0 0.4rem;
+        // padding: 0 0.4rem;
         background: #fff;
         overflow: hidden;
         .tabItem {
-            height: 30 / @basewidth;
-            //border: 1px solid #000;
-            margin:0 5/@basewidth;
+          height: 30 / @basewidth;
+          //border: 1px solid #000;
+          margin: 0 5 / @basewidth;
           .txt {
             white-space: nowrap;
             display: inline-block;
@@ -192,7 +218,7 @@ export default {
       .linner {
         width: 50%;
         height: 0.8rem;
-       // background-color: tomato;
+        // background-color: tomato;
       }
       .toogle {
         width: 50%;

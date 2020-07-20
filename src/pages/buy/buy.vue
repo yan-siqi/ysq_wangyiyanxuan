@@ -1,10 +1,10 @@
 <template>
-  <div>这个是搜索界面</div>
+  <div>这里是值得买界面</div>
 </template>
 
 <script>
 export default {
-  name: 'Search',
+  name: 'Buy',
 }
 </script>
 

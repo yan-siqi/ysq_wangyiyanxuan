@@ -5,20 +5,21 @@
         <i class="icon active"></i>
         <span class="icon_text active">首页</span>
       </div>
-      <div class="foot_item">
+      <div class="foot_item" @click="toCategory('/category')">
         <div class="icon "></div>
         <span class="icon_text">分类</span>
       </div>
-      <div class="foot_item">
+      <div class="foot_item" @click="toBuy('/buy')">
         <div class="icon "></div>
         <span class="icon_text">值得买</span>
       </div>
-      <div class="foot_item">
+      <div class="foot_item" @click="toCart('/cart')">
         <div class="icon"></div>
         <span class="icon_text">购物车</span>
       </div>
       <div class="foot_item" @click="toPersonal('/personal')">
-<!--        <router-link to='/personal'></router-link> -->
+        <!-- <router-link to="/personal"></router-link> -->
+        <router-view></router-view>
         <div class="icon"></div>
         <span class="icon_text">个人中心</span>
       </div>
@@ -30,9 +31,19 @@
 export default {
   name: "Footer",
   methods: {
+    
+    toCategory(path){
+       this.$router.push(path);
+    },
+    toBuy(path){
+       this.$router.push(path);
+    },
+    toCart(path){
+       this.$router.push(path);
+    },
     toPersonal(path) {
-      console.log('点击事件后触发了')
-      console.log(this.$router)
+      console.log("点击事件后触发了");
+      console.log(this.$router);
       this.$router.push(path);
     },
   },
