@@ -84,8 +84,6 @@
 
 <script>
 import { mapState, mapActions } from "vuex";
-//import request from "../../../utils/request";
-//import Recommend from "../../recommend/recommend";
 export default {
   name: "Header",
   components: {
@@ -119,6 +117,7 @@ export default {
 <style lang="less">
 @basewidth: 37.5rem;
 .headerContainer {
+  z-index:5;
   width: 375 / @basewidth;
   height: 74 / @basewidth;
   //background-color: brown;
