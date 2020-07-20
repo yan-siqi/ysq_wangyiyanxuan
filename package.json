@@ -10,6 +10,7 @@
   "dependencies": {
     "better-scroll": "^1.15.2",
     "core-js": "^3.6.5",
+    "element-ui": "^2.13.2",
     "less-loader": "^6.2.0",
     "postcss-plugin-px2rem": "^0.8.1",
     "stylus": "^0.54.8",
