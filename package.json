@@ -14,7 +14,9 @@
     "postcss-plugin-px2rem": "^0.8.1",
     "stylus": "^0.54.8",
     "stylus-loader": "^3.0.2",
+    "swiper": "^6.0.4",
     "vue": "^2.6.11",
+    "vue-awesome-swiper": "^4.1.1",
     "vue-router": "^3.3.4",
     "vuex": "^3.5.1"
   },

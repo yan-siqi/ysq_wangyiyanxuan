@@ -1,4 +1,7 @@
 import Vue from 'vue'
+//import VueAwesomeSwiper from 'vue-awesome-swiper'
+//import 'swiper/css/swiper.css'
+import 'swiper/swiper-bundle.css'
 import App from './App.vue'
 import router from './router/index.js'
 import store from './store/index'
