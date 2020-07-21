@@ -4,62 +4,7 @@
     <div class="top"></div>
     <!-- 内容区 -->
     <div class="content">
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
-      <div>内容</div>
+   
     </div>
   </div>
 </template>
