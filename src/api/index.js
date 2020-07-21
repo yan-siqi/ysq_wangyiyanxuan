@@ -3,5 +3,12 @@
 */
 
 import ajax from './ajax'
-import request from '../utils/request'
-
+const BASE_URL='/api'
+//import request from '../utils/request'
+//请求获取分类页的数据
+export function reqCategoryData(){
+    return ajax({
+        method:'GET',
+        url:''
+    })
+}

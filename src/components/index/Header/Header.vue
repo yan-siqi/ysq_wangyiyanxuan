@@ -18,15 +18,62 @@
       </div>
       <!-- 导航区域 -->
       <div class="top2">
-      <nut-tab @tab-switch="tabSwitch" :is-scroll="true" :wrapper-height="10">
-        <nut-tab-panel tab-title="页签1">页签1</nut-tab-panel>
-        <nut-tab-panel tab-title="页签2">页签2</nut-tab-panel>
-        <nut-tab-panel tab-title="页签3">页签3</nut-tab-panel>
-        <nut-tab-panel tab-title="页签4">页签4</nut-tab-panel>
-        <nut-tab-panel tab-title="页签5">页签5</nut-tab-panel>
-        <nut-tab-panel tab-title="页签6">页签6</nut-tab-panel>
-        <nut-tab-panel tab-title="页签7">页签7</nut-tab-panel>
-      </nut-tab>
+        <div class="hLeftTabs" enable-flex scroll-x="true">
+          <div class="tabList" scroll>
+            <ul class="content">
+              <li class="tabItem"></li>
+            </ul>
+            <div class="tabItem" @tab-switch="tabSwitch" :is-scroll="true">
+              <span class="txt" tab-title="推荐">
+                推荐
+              </span>
+            </div>
+
+            <div class="tabItem">
+              <a class="txt">居家生活</a>
+            </div>
+            <div class="tabItem">
+              <a class="txt">
+                服饰鞋包
+              </a>
+            </div>
+            <div class="tabItem">
+              <a class="txt">
+                美食酒水
+              </a>
+            </div>
+            <div class="tabItem">
+              <span class="txt">
+                推荐
+              </span>
+            </div>
+            <div class="tabItem">
+              <span class="txt">
+                推荐
+              </span>
+            </div>
+            <div class="tabItem">
+              <span class="txt">
+                推荐
+              </span>
+            </div>
+            <div class="tabItem">
+              <span class="txt">
+                推荐
+              </span>
+            </div>
+            <div class="tabItem">
+              <span class="txt">
+                推荐
+              </span>
+            </div>
+            <div class="tabItem">
+              <span class="txt">
+                推荐
+              </span>
+            </div>
+          </div>
+        </div>
         <div class="hRight">
           <div class="linner"></div>
           <div class="toogle">
@@ -40,6 +87,11 @@
 
 <script>
 import { mapState, mapActions } from "vuex";
+import Vue from "vue";
+import NutUI from "@nutui/nutui";
+import "@nutui/nutui/dist/nutui.css";
+import { TabPanel } from "@nutui/nutui";
+NutUI.install(Vue);
 //import BScroll from 'better-scroll'
 
 //new BScroll(".tabList");
@@ -53,6 +105,9 @@ export default {
     this.getIndexData();
   },
   methods: {
+    tabSwitch: function(index, event) {
+      console.log(index + "--" + event);
+    },
     ...mapActions({
       getIndexData: "getIndexData",
     }),

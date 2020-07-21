@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <Header />
     <!-- 内容区域 -->
     <div class="content">
       <!-- 首页轮播 -->
@@ -237,8 +236,7 @@
       <div class="moduleContentHot">
         <div class="moduleContentHotList">
           <div class="item-big">
-            <div class="itembig1">
-            </div>
+            <div class="itembig1"></div>
             <div class="itembig2"></div>
           </div>
           <div class="item-small">
@@ -314,11 +312,10 @@
 </template>
 
 <script>
-import Header from "../Header/Header";
 export default {
   name: "Content",
   mounted() {},
-  components: { Header },
+  components: {},
 };
 </script>
 
@@ -751,7 +748,7 @@ export default {
     .moduleContentHot {
       width: 100%;
       height: 305.14 / @basewidth;
-     // background-color: aqua;
+      // background-color: aqua;
       .moduleContentHotList {
         .item-big {
           .itembig1 {
@@ -760,41 +757,39 @@ export default {
             background-color: antiquewhite;
             display: inline-block;
             margin: 15 / @basewidth 5 / @basewidth 0 15 / @basewidth;
-           
-            }
-          }
-          .itembig2 {
-            width: 45%;
-            height: 100 / @basewidth;
-            background-color: antiquewhite;
-            display: inline-block;
           }
         }
-        .item-small {
-          padding: 0 15 / @basewidth;
-          .smallItem {
-            float: left;
-            width: 82.5 / @basewidth;
-            height: 90 / @basewidth;
-           // background-color: pink;
-            margin: 3 / @basewidth 0 / @basewidth 3 / @basewidth 3 / @basewidth;
-            .txt {
-              height: 18 / @basewidth;
-              line-height: 18 / @basewidth;
-              text-align: center;
-              width: 100%;
-             // background-color: red;
-              font-size: 12 / @basewidth;
-              color: #333;
-            }
-            img {
-              width: 100%;
-              height: 72 / @basewidth;
-            }
+        .itembig2 {
+          width: 45%;
+          height: 100 / @basewidth;
+          background-color: antiquewhite;
+          display: inline-block;
+        }
+      }
+      .item-small {
+        padding: 0 15 / @basewidth;
+        .smallItem {
+          float: left;
+          width: 82.5 / @basewidth;
+          height: 90 / @basewidth;
+          // background-color: pink;
+          margin: 3 / @basewidth 0 / @basewidth 3 / @basewidth 3 / @basewidth;
+          .txt {
+            height: 18 / @basewidth;
+            line-height: 18 / @basewidth;
+            text-align: center;
+            width: 100%;
+            // background-color: red;
+            font-size: 12 / @basewidth;
+            color: #333;
+          }
+          img {
+            width: 100%;
+            height: 72 / @basewidth;
           }
         }
       }
     }
   }
-
+}
 </style>

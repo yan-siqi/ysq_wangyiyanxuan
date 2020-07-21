@@ -2,15 +2,15 @@
   <div class="buyContainer">
     <!-- 头部 -->
     <div class="top">
-      <nut-tab @tab-switch="tabSwitch" :is-scroll="true">
-        <nut-tab-panel tab-title="页签1">页签1</nut-tab-panel>
-        <nut-tab-panel tab-title="页签2">页签2</nut-tab-panel>
-        <nut-tab-panel tab-title="页签3">页签3</nut-tab-panel>
-        <nut-tab-panel tab-title="页签4">页签4</nut-tab-panel>
-        <nut-tab-panel tab-title="页签5">页签5</nut-tab-panel>
-        <nut-tab-panel tab-title="页签6">页签6</nut-tab-panel>
-        <nut-tab-panel tab-title="页签7">页签7</nut-tab-panel>
-      </nut-tab>
+     <!-- <nut-tab @tab-switch="tabSwitch" :is-scroll="true">
+      <nut-tab-panel tab-title="页签1">页签1</nut-tab-panel>
+      <nut-tab-panel tab-title="页签2">页签2</nut-tab-panel>
+      <nut-tab-panel tab-title="页签3">页签3</nut-tab-panel>
+      <nut-tab-panel tab-title="页签4">页签4</nut-tab-panel>
+      <nut-tab-panel tab-title="页签5">页签5</nut-tab-panel>
+      <nut-tab-panel tab-title="页签6">页签6</nut-tab-panel>
+      <nut-tab-panel tab-title="页签7">页签7</nut-tab-panel>
+  </nut-tab> -->
     </div>
     <!-- 内容区 -->
     <div class="content"></div>
