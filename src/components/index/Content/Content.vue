@@ -36,7 +36,6 @@
         </ul>
       </div>
       <div class="listContainer">
-
       </div>
     </div>
   </div>
@@ -44,7 +43,7 @@
 
 <script>
 import Header from "../Header/Header";
-//import Swiper from "swiper"; //自动轮播
+//import { TabPanel } from "@nutui/nutui";
 export default {
   name: "Content",
   mounted() {},
@@ -56,15 +55,18 @@ export default {
 @basewidth: 37.5rem;
 .container {
   width: 100%;
+  height: calc(100vh-1.3rem);
+  overflow: scroll;
   .content {
     width: 100%;
-    height: calc(100vh - 1.4rem);
+    height: calc(100vh - 3.6rem);
+    overflow: scroll;
     background-color: pink;
     position: relative;
     .carsoulContainer {
-      position: absolute;
+      /* position: absolute;
       left: 0;
-      top: 89 / @basewidth;
+      top: 89 / @basewidth; */
       width: 100%;
       // height: 10rem;
       background-color: brown;
@@ -85,9 +87,9 @@ export default {
     .indexService {
       width: 100%;
       height: 36 / @basewidth;
-      position: absolute;
+     /*  position: absolute;
       left: 0;
-      top: 239 / @basewidth;
+      top: 239 / @basewidth; */
       background-color: brown;
 
       .g-grow {
@@ -131,8 +133,8 @@ export default {
       }
     }
     .listContainer{
-      width: 100%;
-      height: 170/@basewidth;
+     /*  width: 100%;
+      height: 170/@basewidth; */
       background-color: chartreuse;
     }
   }

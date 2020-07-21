@@ -1,11 +1,10 @@
-/* import config from './config.js'
-
+import config from './config.js'
+import ajax from '../api/ajax'
 export default (url, data={}, method='GET') => {
 	return new Promise((resolve, reject) => {
 		// 执行异步任务
-		request({
-			url: config.host + url, // 小程序
-			// url, // H5
+		ajax({
+			url: config.host + url, 
 			data,
 			method,
 			success: (res) => {
@@ -16,4 +15,4 @@ export default (url, data={}, method='GET') => {
 			}
 		})
 	})
-} */
+}

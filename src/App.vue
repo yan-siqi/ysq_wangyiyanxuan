@@ -18,6 +18,7 @@ export default {
 
 <style lang="stylus">
 @import url('../src/assets/iconfont/iconfont.styl')
+
 #app{
   display flex
   flex-direction column

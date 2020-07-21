@@ -1,4 +1,4 @@
-css: {
+/* css: {
     loaderOptions: {
         postcss: {
             plugins: [
@@ -11,8 +11,9 @@ css: {
             ]
         }
     }
-}
+} */
 module.exports = {
+    lintOnSave: false, // 关闭eslint规则检查
     devServer: {
       proxy: {
             '/api': {

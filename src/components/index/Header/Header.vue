@@ -121,9 +121,9 @@ export default {
   width: 375 / @basewidth;
   height: 74 / @basewidth;
   //background-color: brown;
-  position: fixed;
+ /*  position: fixed;
   left: 0;
-  top: 0;
+  top: 0; */
   padding: 0.2rem 0.4rem;
   background-color: #ffffff;
   .top1 {

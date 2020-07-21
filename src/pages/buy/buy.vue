@@ -1,13 +1,88 @@
 <template>
-  <div>这里是值得买界面</div>
+  <div class="buyContainer">
+    <!-- 头部 -->
+    <div class="top"></div>
+    <!-- 内容区 -->
+    <div class="content">
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+      <div>内容</div>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'Buy',
-}
+  name: "Buy",
+};
 </script>
 
 <style lang="less" scoped>
-
+@basewidth: 37.5rem;
+.buyContainer {
+  .top {
+    width: 100%;
+    height: 50 / @basewidth;
+    background-color: pink;
+  }
+  .content{
+    width: 100%;
+    height: calc(100vh - 2.64rem);
+    background-color: aquamarine;
+    overflow: scroll;
+  }
+}
 </style>
