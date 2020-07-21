@@ -171,7 +171,7 @@
             - 新人专享礼 -
           </span>
         </div>
-        <div class="content">
+        <div class="contentFresh">
           <div class="left">
             <div class="name">新人专享礼包</div>
             <div class="imgWrap">
@@ -226,6 +226,85 @@
                   <div class="subTitle">一元起包邮</div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 类目热销榜 -->
+      <div class="moduleTitle">
+        <span>类目热销榜</span>
+      </div>
+      <div class="moduleContentHot">
+        <div class="moduleContentHotList">
+          <div class="item-big">
+            <div class="itembig1">
+            </div>
+            <div class="itembig2"></div>
+          </div>
+          <div class="item-small">
+            <div class="smallItem">
+              <div class="txt">美食酒水</div>
+              <img
+                src="https://yanxuan-item.nosdn.127.net/22cfd602403ca6a026a439e08e3e3127.png?quality=75&type=webp&imageView&thumbnail=200x200"
+                alt=""
+                srcset=""
+              />
+            </div>
+            <div class="smallItem">
+              <div class="txt">美食酒水</div>
+              <img
+                src="https://yanxuan-item.nosdn.127.net/22cfd602403ca6a026a439e08e3e3127.png?quality=75&type=webp&imageView&thumbnail=200x200"
+                alt=""
+                srcset=""
+              />
+            </div>
+            <div class="smallItem">
+              <div class="txt">美食酒水</div>
+              <img
+                src="https://yanxuan-item.nosdn.127.net/22cfd602403ca6a026a439e08e3e3127.png?quality=75&type=webp&imageView&thumbnail=200x200"
+                alt=""
+                srcset=""
+              />
+            </div>
+            <div class="smallItem">
+              <div class="txt">美食酒水</div>
+              <img
+                src="https://yanxuan-item.nosdn.127.net/22cfd602403ca6a026a439e08e3e3127.png?quality=75&type=webp&imageView&thumbnail=200x200"
+                alt=""
+                srcset=""
+              />
+            </div>
+            <div class="smallItem">
+              <div class="txt">美食酒水</div>
+              <img
+                src="https://yanxuan-item.nosdn.127.net/22cfd602403ca6a026a439e08e3e3127.png?quality=75&type=webp&imageView&thumbnail=200x200"
+                alt=""
+                srcset=""
+              />
+            </div>
+            <div class="smallItem">
+              <div class="txt">美食酒水</div>
+              <img
+                src="https://yanxuan-item.nosdn.127.net/22cfd602403ca6a026a439e08e3e3127.png?quality=75&type=webp&imageView&thumbnail=200x200"
+                alt=""
+                srcset=""
+              />
+            </div>
+            <div class="smallItem">
+              <div class="txt">美食酒水</div>
+              <img
+                src="https://yanxuan-item.nosdn.127.net/22cfd602403ca6a026a439e08e3e3127.png?quality=75&type=webp&imageView&thumbnail=200x200"
+                alt=""
+                srcset=""
+              />
+            </div>
+            <div class="smallItem">
+              <div class="txt">美食酒水</div>
+              <img
+                src="https://yanxuan-item.nosdn.127.net/22cfd602403ca6a026a439e08e3e3127.png?quality=75&type=webp&imageView&thumbnail=200x200"
+                alt=""
+                srcset=""
+              />
             </div>
           </div>
         </div>
@@ -410,16 +489,16 @@ export default {
           //position: relative;
         }
       }
-      .content {
+      .contentFresh {
         width: 100%;
-         //height: 270 / @basewidth;
+        //height: 270 / @basewidth;
         display: flex;
         .left {
-          height:234 / @basewidth;
+          height: 234 / @basewidth;
           display: block;
           width: 4.57333rem;
           height: 210 / @basewidth;
-         background: #f9e9cf;
+          background: #f9e9cf;
           border-radius: 0.05333rem;
           margin-right: 0.05333rem;
           float: left;
@@ -468,7 +547,7 @@ export default {
             width: 100%;
             height: 100%;
             background: #fbe2d3;
-            
+
             .activityItem {
               //position: relative;
               display: block;
@@ -530,8 +609,8 @@ export default {
             margin-top: 3 / @basewidth;
             width: 100%;
             height: 100%;
-            background: #FFECC2;
-            
+            background: #ffecc2;
+
             .activityItem {
               //position: relative;
               display: block;
@@ -546,7 +625,7 @@ export default {
               position: relative;
               .picWrap {
                 position: absolute;
-                right: 9/ @basewidth;
+                right: 9 / @basewidth;
                 top: -20 / @basewidth;
                 .pic {
                   width: 2.66667rem;
@@ -656,6 +735,66 @@ export default {
         }
       }
     }
+    .moduleTitle {
+      height: 50 / @basewidth;
+      width: 100%;
+      span {
+        display: block;
+        // width: rem;
+        height: 100%;
+        //background-color: pink;
+        margin: 15 / @basewidth;
+        line-height: 50 / @basewidth;
+        font-size: 17 / @basewidth;
+      }
+    }
+    .moduleContentHot {
+      width: 100%;
+      height: 305.14 / @basewidth;
+     // background-color: aqua;
+      .moduleContentHotList {
+        .item-big {
+          .itembig1 {
+            width: 45%;
+            height: 100 / @basewidth;
+            background-color: antiquewhite;
+            display: inline-block;
+            margin: 15 / @basewidth 5 / @basewidth 0 15 / @basewidth;
+           
+            }
+          }
+          .itembig2 {
+            width: 45%;
+            height: 100 / @basewidth;
+            background-color: antiquewhite;
+            display: inline-block;
+          }
+        }
+        .item-small {
+          padding: 0 15 / @basewidth;
+          .smallItem {
+            float: left;
+            width: 82.5 / @basewidth;
+            height: 90 / @basewidth;
+           // background-color: pink;
+            margin: 3 / @basewidth 0 / @basewidth 3 / @basewidth 3 / @basewidth;
+            .txt {
+              height: 18 / @basewidth;
+              line-height: 18 / @basewidth;
+              text-align: center;
+              width: 100%;
+             // background-color: red;
+              font-size: 12 / @basewidth;
+              color: #333;
+            }
+            img {
+              width: 100%;
+              height: 72 / @basewidth;
+            }
+          }
+        }
+      }
+    }
   }
-}
+
 </style>
