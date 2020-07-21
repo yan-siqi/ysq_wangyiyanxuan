@@ -18,59 +18,15 @@
       </div>
       <!-- 导航区域 -->
       <div class="top2">
-        <div class="hLeftTabs" enable-flex scroll-x="true">
-          <div class="tabList" scroll>
-            <div class="tabItem">
-              <span class="txt">
-                推荐
-              </span>
-            </div>
-
-            <div class="tabItem">
-              <span class="txt">居家生活</span>
-            </div>
-            <div class="tabItem">
-              <span class="txt">
-                服饰鞋包
-              </span>
-            </div>
-            <div class="tabItem">
-              <span class="txt">
-                美食酒水
-              </span>
-            </div>
-            <div class="tabItem">
-              <span class="txt">
-                推荐
-              </span>
-            </div>
-            <div class="tabItem">
-              <span class="txt">
-                推荐
-              </span>
-            </div>
-            <div class="tabItem">
-              <span class="txt">
-                推荐
-              </span>
-            </div>
-            <div class="tabItem">
-              <span class="txt">
-                推荐
-              </span>
-            </div>
-            <div class="tabItem">
-              <span class="txt">
-                推荐
-              </span>
-            </div>
-            <div class="tabItem">
-              <span class="txt">
-                推荐
-              </span>
-            </div>
-          </div>
-        </div>
+      <nut-tab @tab-switch="tabSwitch" :is-scroll="true" :wrapper-height="10">
+        <nut-tab-panel tab-title="页签1">页签1</nut-tab-panel>
+        <nut-tab-panel tab-title="页签2">页签2</nut-tab-panel>
+        <nut-tab-panel tab-title="页签3">页签3</nut-tab-panel>
+        <nut-tab-panel tab-title="页签4">页签4</nut-tab-panel>
+        <nut-tab-panel tab-title="页签5">页签5</nut-tab-panel>
+        <nut-tab-panel tab-title="页签6">页签6</nut-tab-panel>
+        <nut-tab-panel tab-title="页签7">页签7</nut-tab-panel>
+      </nut-tab>
         <div class="hRight">
           <div class="linner"></div>
           <div class="toogle">
@@ -84,10 +40,13 @@
 
 <script>
 import { mapState, mapActions } from "vuex";
+//import BScroll from 'better-scroll'
+
+//new BScroll(".tabList");
 export default {
   name: "Header",
   components: {
-   // Recommend,
+    // Recommend,
   },
   async mounted() {
     //获取首页数据
@@ -95,12 +54,12 @@ export default {
   },
   methods: {
     ...mapActions({
-				getIndexData: 'getIndexData'
-			}),
-			changeNavId(navIndex, navId){
-				this.navIndex = navIndex
-				this.navId = navId
-			},
+      getIndexData: "getIndexData",
+    }),
+    changeNavId(navIndex, navId) {
+      this.navIndex = navIndex;
+      this.navId = navId;
+    },
     //跳转到search界面
     toSearch(path) {
       this.$router.push(path);
@@ -117,15 +76,15 @@ export default {
 <style lang="less">
 @basewidth: 37.5rem;
 .headerContainer {
-  z-index:5;
+  z-index: 5;
   width: 375 / @basewidth;
   height: 74 / @basewidth;
   //background-color: brown;
- /*  position: fixed;
+  /*  position: fixed;
   left: 0;
   top: 0; */
-  padding: 0.2rem 0.4rem;
-  background-color: #ffffff;
+  //margin: 5px 0px 0 5px;
+
   .top1 {
     width: 345 / @basewidth;
     height: 44 / @basewidth;
@@ -133,7 +92,8 @@ export default {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
+   // background-color: pink;
+    margin: 5px auto;
     .hLogo {
       height: 20 / @basewidth;
       height: 20 / @basewidth;
@@ -178,6 +138,7 @@ export default {
   .top2 {
     width: 345 / @basewidth;
     height: 30 / @basewidth;
+    margin :0 auto;
     //background-color: palevioletred;
     .hLeftTabs {
       width: 80%;
@@ -187,6 +148,7 @@ export default {
       /* 默认是基线对齐 */
       vertical-align: top;
       .tabList {
+        // width: 5 / @basewidth;
         display: flex;
         flex-direction: row;
         flex-shrink: 0;
@@ -194,9 +156,6 @@ export default {
         background: #fff;
         overflow: hidden;
         .tabItem {
-          height: 30 / @basewidth;
-          //border: 1px solid #000;
-          margin: 0 5 / @basewidth;
           .txt {
             white-space: nowrap;
             display: inline-block;
