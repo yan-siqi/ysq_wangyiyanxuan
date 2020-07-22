@@ -1,6 +1,5 @@
 import axios from "axios";
-//import store from "../store/index";
-//import config from "../utils/config";
+
 //配置通用的基础路径
 const instance = axios.create({
   baseUrl: "/api", //代理服务器转发数据

@@ -1,5 +1,5 @@
-import request from '../../utils/request.js'
-const state={
+//import request from '../../utils/request.js'
+/* const state={
     initData:'初始化的测试数据',
     indexData:{}//主页的数据
 }
@@ -19,4 +19,4 @@ export default {
     state,
     mutations,
     actions
-}
+} */

@@ -15,6 +15,12 @@
             </div>
           </div>
         </div>
+        <div class="right">
+          <a href="">
+            <i></i>
+          </a>
+          <div class="superEntry"></div>
+        </div>
       </div>
     </header>
     <section class="myAsset">
@@ -161,7 +167,8 @@ export default {
       overflow: hidden;
       .left {
         margin-top: 70 / @basewidth;
-        height: 200 / @basewidth;
+        height: 150 / @basewidth;
+       // background-color: pink;
         display: flex;
         img {
           display: block;
@@ -171,7 +178,13 @@ export default {
           border-radius: 50%;
         }
         .info {
+          height: 100%;
+         // background-color: red;
+          // text-align: center;
+          // line-height:50 / @basewidth; ;
           .nickName {
+            display: block;
+            margin: 20 / @basewidth;
             color: #fff;
             font-size: 0.48rem;
             line-height: 1.2;
@@ -182,6 +195,8 @@ export default {
             overflow: hidden;
           }
           .memberShip {
+            display: block;
+            margin-left: 20 / @basewidth;
             .memeberTitle {
               color: #fff;
               font-size: 0.37333rem;

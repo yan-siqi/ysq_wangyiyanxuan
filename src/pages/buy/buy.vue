@@ -2,18 +2,20 @@
   <div class="buyContainer">
     <!-- 头部 -->
     <div class="top">
-     <!-- <nut-tab @tab-switch="tabSwitch" :is-scroll="true">
-      <nut-tab-panel tab-title="页签1">页签1</nut-tab-panel>
-      <nut-tab-panel tab-title="页签2">页签2</nut-tab-panel>
-      <nut-tab-panel tab-title="页签3">页签3</nut-tab-panel>
-      <nut-tab-panel tab-title="页签4">页签4</nut-tab-panel>
-      <nut-tab-panel tab-title="页签5">页签5</nut-tab-panel>
-      <nut-tab-panel tab-title="页签6">页签6</nut-tab-panel>
-      <nut-tab-panel tab-title="页签7">页签7</nut-tab-panel>
-  </nut-tab> -->
+      <div class="contentTop">
+        <div class="contentLeft">
+          <a href=""></a>
+        </div>
+        <span>值得买</span>
+        <div class="contentRight"></div>
+      </div>
     </div>
     <!-- 内容区 -->
-    <div class="content"></div>
+    <div class="content">
+     <!--  <ul class="infinite-list" v-infinite-scroll="load" style="overflow:auto">
+        <li v-for="i in count" class="infinite-list-item">{{ i }}</li>
+      </ul> -->
+    </div>
   </div>
 </template>
 
@@ -24,12 +26,46 @@ import "@nutui/nutui/dist/nutui.css";
 import { TabPanel } from "@nutui/nutui";
 NutUI.install(Vue);
 export default {
-  name: "Buy",
+/*   data() {
+    return {
+      data: new Array(30),
+      page: 5,
+      num: 30,
+      isHasMore: true,
+      isLoading: false,
+      isErr: false,
+      timer: null,
+    };
+  },
   methods: {
-    tabSwitch: function(index, event) {
-      console.log(index + "--" + event);
+    onInfinite() {
+      this.isLoading = true;
+      this.timer = setTimeout(() => {
+        if (this.page <= 5) {
+          this.data = new Array(this.num * this.page);
+          this.page = this.page + 1;
+        } else {
+          this.isHasMore = false;
+        }
+        this.isLoading = false;
+      }, 100);
     },
   },
+  destroyed() {
+    clearTimeout(this.timer);
+  }, */
+
+
+  data () {
+      return {
+        count: 0
+      }
+    },
+    methods: {
+      load () {
+        this.count += 2
+      }
+    } 
 };
 </script>
 
@@ -40,6 +76,12 @@ export default {
     width: 100%;
     height: 50 / @basewidth;
     background-color: pink;
+    .contentTop{
+      width: 92%;
+      margin:0 auto;
+      height: 100%;
+      background-color: red;
+    }
   }
   .content {
     width: 100%;

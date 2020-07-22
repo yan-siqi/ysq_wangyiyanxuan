@@ -323,8 +323,8 @@ export default {
 @basewidth: 37.5rem;
 .container {
   width: 100%;
-  height: calc(100vh-1.3rem);
-  overflow: scroll;
+ /*  height: calc(100vh-1.3rem);
+  overflow: scroll; */
   .content {
     width: 100%;
     height: calc(100vh - 3.6rem);
