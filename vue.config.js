@@ -12,7 +12,7 @@ module.exports = {
         }
       }
     },
-    betterScroll:{
+   /*  betterScroll:{
         click: true,  // 元素可触发点击事件
         scrollX: true,  // 横向可滑动，默认为false
         scrollY: false,  // 纵向可滑动，默认为true
@@ -26,8 +26,7 @@ module.exports = {
             style: 'ease-in'
           },
           threshold: 0.5,  // 滑动切换到超过一半时切换到下一屏
-          stepX: window.innerWidth,  // 横向切换距离为窗口宽度
-          stepY: window.innerHeight  // 纵向切换距离为窗口高度
+         
         }
-      }
+      } */
   }
