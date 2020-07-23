@@ -54,7 +54,7 @@ export default {
     justify-content: space-between;
     .topTitle {
       line-height: 44 / @basewidth;
-      font-size: 21 / @basewidth;
+      font-size: 18 / @basewidth;
     }
     .palceholder {
       width: 32 / @basewidth;
@@ -95,7 +95,7 @@ export default {
   .titles {
     height: 35 / @basewidth;
     width: 100%;
-    background-color: #eee;
+    background-color: #ddd;
 
     .servicePolicy {
       width: 94%;
