@@ -41,10 +41,12 @@
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
+import Footer from '../../components/index/Footer/Footer'
 import { reqCategoryData, reqCategoryNavData } from "@/api";
 import "../../api/index";
 export default {
@@ -55,6 +57,7 @@ export default {
       navIndex: 0, //设置导航标识
     };
   },
+  components:{Footer},
   async mounted() {
     //发请求获取异步数据
     let cateGoryListData = await reqCategoryData("/api/getCateGoryData");

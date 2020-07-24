@@ -30,12 +30,15 @@
         <div class="txt">去添加点什么吧</div>
       </div>
     </div>
+     <Footer />
   </div>
 </template>
 
 <script>
+import Footer from '../../components/index/Footer/Footer'
 export default {
   name: "Cart",
+  components:{Footer},
 };
 </script>
 

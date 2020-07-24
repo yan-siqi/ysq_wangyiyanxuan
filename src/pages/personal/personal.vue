@@ -135,14 +135,22 @@
       </ul>
     </section>
     <footer class="loginOut">
-      <section class="outTxt">退出登录</section>
+      <section class="outTxt" @click="toLoginOut('/loginOut')">退出登录</section>
     </footer>
+    <Footer />
   </div>
 </template>
 
 <script>
+import Footer from '../../components/index/Footer/Footer'
 export default {
   name: "Personal",
+  components:{Footer},
+  methods:{
+    toLoginOut(path) {
+      this.$router.push(path);
+    },
+  }
 };
 </script>
 

@@ -1,18 +1,20 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <Footer />
+   
+  <!--   <Test />  -->
   </div>
 </template>
 
 <script>
 import "../src/assets/function/index";
-import Footer from "../src/components/index/Footer/Footer";
+import Test from '../src/pages/test/test'
+
 //引入滑块滑动
 //import BScroll from 'better-scroll'
 export default {
   name: "App",
-  components: { Footer },
+  components: { },
 };
 </script>
 

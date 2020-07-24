@@ -112,33 +112,66 @@
           </div>
         </div>
       </div>
-      <ul class="infinite-list" v-infinite-scroll="load" style="overflow:auto">
-        <div class="contianerList">
-          <li v-for="i in count" class="infinite-list-item">{{ i }}</li>
+      <div class="container-water-fall">
+        <div>
+          <button @click="loadmore">loadmore</button>
+          <button @click="mix">mix</button>
+          <button @click="switchCol('5')">5列</button>
+          <button @click="switchCol('8')">8列</button>
+          <button @click="switchCol('10')">10列</button>
         </div>
-      </ul>
+
+        <waterfall
+          :col="col"
+          :width="itemWidth"
+          :gutterWidth="gutterWidth"
+          :data="data"
+          @loadmore="loadmore"
+          @scroll="scroll"
+        >
+          <template>
+            <div class="cell-item" v-for="(item, index) in data" :key="index">
+              <img v-if="item.img" :src="item.img" alt="加载错误" />
+              <div class="item-body">
+                <div class="item-desc">{{ item.title }}</div>
+                <div class="item-footer">
+                  <div
+                    class="avatar"
+                    :style="{ backgroundImage: `url(${item.avatar})` }"
+                  ></div>
+                  <div class="name">{{ item.user }}</div>
+                  <div class="like" :class="item.liked ? 'active' : ''">
+                    <i></i>
+                    <div class="like-total">{{ item.liked }}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </template>
+        </waterfall>
+        
+      </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
+import Footer from '../../components/index/Footer/Footer'
 import Vue from "vue";
 import NutUI from "@nutui/nutui";
 import "@nutui/nutui/dist/nutui.css";
 import { TabPanel } from "@nutui/nutui";
+
 NutUI.install(Vue);
 export default {
   data() {
     return {
-      data: new Array(30),
-      page: 5,
-      num: 30,
-      isHasMore: true,
-      isLoading: false,
-      isErr: false,
-      timer: null,
+      data:[],
+      col:5
     };
   },
+  components:{Footer},
   methods: {
     onInfinite() {
       this.isLoading = true;
@@ -156,16 +189,25 @@ export default {
   destroyed() {
     clearTimeout(this.timer);
   },
-
-  data() {
-    return {
-      count: 0,
-    };
-  },
+computed:{
+	      itemWidth(){
+	            return (138*0.5*(document.documentElement.clientWidth/375)) // #rem布局 计算宽度
+	      },
+	      gutterWidth(){
+	            return (9*0.5*(document.documentElement.clientWidth/375))//	#rem布局 计算x轴方向margin(y轴方向的margin自定义在css中即可)
+	      }
+	    },
   methods: {
-    load() {
-      this.count += 2;
-    },
+   scroll(scrollData){
+                console.log(scrollData)
+            },
+	        switchCol(col){
+	            this.col = col
+	            console.log(this.col)
+	      },
+	      loadmore(index){
+	            this.data = this.data.concat(this.data)
+	      }
   },
 };
 </script>
